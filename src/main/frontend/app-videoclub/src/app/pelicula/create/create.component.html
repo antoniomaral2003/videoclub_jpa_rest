@@ -1,0 +1,151 @@
+<div>
+
+  <div class="d-flex justify-content-between">
+    <h4>Pelicula</h4>
+    <a href="#" routerLink="/pelicula/index" class="btn">Volver</a>
+  </div>
+
+  <hr/>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+
+    <div class="form-group row">
+      <div class="col-md-1 ">
+        <label for="titulo">Titulo:</label>
+        <input
+          formControlName="titulo"
+          id="titulo"
+          type="text"
+          class="form-control">
+        <div *ngIf="f.titulo.touched && f.titulo.invalid" class="alert alert-danger">
+          <div *ngIf="f.titulo.errors.required">*Titulo es requerido.</div>
+          <div *ngIf="f.titulo.errors.pattern">*El titulo sólo puede contener letras.</div>
+        </div>
+      </div>
+      <div class="col-md-1 ">
+        <label for="descripcion">Descripcion:</label>
+        <input
+          formControlName="descripcion"
+          id="descripcion"
+          type="text"
+          class="form-control">
+        <div *ngIf="f.descripcion.touched && f.descripcion.invalid" class="alert alert-danger">
+          <div *ngIf="f.descripcion.errors.required">*Descripcion es requerido.</div>
+          <div *ngIf="f.descripcion.errors.pattern">*La descripcion sólo puede contener letras.</div>
+        </div>
+      </div>
+      <div class="col-md-1 ">
+        <label for="anyoLanzamiento">Año Lanzamiento:</label>
+        <input
+          formControlName="anyoLanzamiento"
+          id="anyoLanzamiento"
+          type="text"
+          class="form-control">
+        <div *ngIf="f.anyoLanzamiento.touched && f.anyoLanzamiento.invalid" class="alert alert-danger">
+          <div *ngIf="f.anyoLanzamiento.errors.required">*Año Lanzamiento es requerido.</div>
+        </div>
+      </div>
+      <div class="col-md-1 ">
+        <label for="idioma">Idioma:</label>
+        <input
+          formControlName="idioma"
+          id="idioma"
+          type="text"
+          class="form-control">
+        <div *ngIf="f.idioma.touched && f.idioma.invalid" class="alert alert-danger">
+          <div *ngIf="f.idioma.errors.required">*Idioma es requerido.</div>
+        </div>
+      </div>
+      <div class="col-md-1 ">
+        <label for="idiomaOriginal">Idioma Original:</label>
+        <input
+          formControlName="idiomaOriginal"
+          id="IdiomaOriginal"
+          type="text"
+          class="form-control">
+        <div *ngIf="f.idiomaOriginal.touched && f.idiomaOriginal.invalid" class="alert alert-danger">
+          <div *ngIf="f.idiomaOriginal.errors.required">*Idioma Original es requerido.</div>
+        </div>
+      </div>
+      <div class="col-md-1 ">
+        <label for="duracionAlquiler">Duracion Alquiler:</label>
+        <input
+          formControlName="duracionAlquiler"
+          id="duracionAlquiler"
+          type="text"
+          class="form-control">
+        <div *ngIf="f.duracionAlquiler.touched && f.duracionAlquiler.invalid" class="alert alert-danger">
+          <div *ngIf="f.duracionAlquiler.errors.required">*Duracion Alquiler es requerido.</div>
+        </div>
+      </div>
+      <div class="col-md-1 ">
+        <label for="rentalRate">Rental Rate:</label>
+        <input
+          formControlName="rentalRate"
+          id="rentalRate"
+          type="text"
+          class="form-control">
+        <div *ngIf="f.rentalRate.touched && f.rentalRate.invalid" class="alert alert-danger">
+          <div *ngIf="f.rentalRate.errors.required">*Rental Rate es requerido.</div>
+        </div>
+      </div>
+      <div class="col-md-1 ">
+        <label for="duracion">Duracion:</label>
+        <input
+          formControlName="duracion"
+          id="duracion"
+          type="text"
+          class="form-control">
+        <div *ngIf="f.duracion.touched && f.duracion.invalid" class="alert alert-danger">
+          <div *ngIf="f.duracion.errors.required">*Duracion es requerido.</div>
+        </div>
+      </div>
+      <div class="col-md-1 ">
+        <label for="replacementCost">Replacement Cost:</label>
+        <input
+          formControlName="replacementCost"
+          id="replacementCost"
+          type="text"
+          class="form-control">
+        <div *ngIf="f.replacementCost.touched && f.replacementCost.invalid" class="alert alert-danger">
+          <div *ngIf="f.replacementCost.errors.required">*Replacement Cost es requerido.</div>
+        </div>
+      </div>
+      <div class="col-md-1 ">
+        <label for="clasificacion">Clasificacion:</label>
+        <input
+          formControlName="clasificacion"
+          id="clasificacion"
+          type="text"
+          class="form-control">
+        <div *ngIf="f.clasificacion.touched && f.clasificacion.invalid" class="alert alert-danger">
+          <div *ngIf="f.clasificacion.errors.required">*Clasificacion es requerido.</div>
+        </div>
+      </div>
+      <div class="col-md-1 ">
+        <label for="caracteristicasEspeciales">Caracteristicas Especiales:</label>
+        <input
+          formControlName="caracteristicasEspeciales"
+          id="caracteristicasEspeciales"
+          type="text"
+          class="form-control">
+        <div *ngIf="f.caracteristicasEspeciales.touched && f.caracteristicasEspeciales.invalid" class="alert alert-danger">
+          <div *ngIf="f.caracteristicasEspeciales.errors.required">*Caracteristicas Especiales es requerido.</div>
+        </div>
+      </div>
+      <div class="col-md-1 ">
+        <label for="categorias">Categorias:</label>
+        <input
+          formControlName="categorias"
+          id="categorias"
+          type="text"
+          class="form-control">
+        <div *ngIf="f.categorias.touched && f.categorias.invalid" class="alert alert-danger">
+          <div *ngIf="f.categorias.errors.required">*Categorias es requerido.</div>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-primary mt-1" type="submit" [disabled]="!form.valid">Enviar</button>
+  </form>
+</div>
