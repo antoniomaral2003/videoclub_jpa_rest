@@ -4,17 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { PeliculaComponent } from './pelicula/pelicula.component';
+import {CategoriaModule} from "./categoria/categoria.module";
+import {PeliculaModule} from "./pelicula/pelicula.module";
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PeliculaComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    CategoriaModule,
+    PeliculaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

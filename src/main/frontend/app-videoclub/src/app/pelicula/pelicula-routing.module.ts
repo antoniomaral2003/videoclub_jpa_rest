@@ -5,10 +5,10 @@ import {CreateComponent} from "../categoria/create/create.component";
 import {EditComponent} from "../categoria/edit/edit.component";
 
 const routes: Routes = [
-  { path: 'pelicula', redirectTo: 'person/index', pathMatch: 'full'},
-  { path: 'pelicula/index', component: IndexComponent },
-  { path: 'pelicula/create', component: CreateComponent },
-  { path: 'pelicula/edit/:idPelicula', component: EditComponent }
+  { path: 'peliculas', redirectTo: 'person/index', pathMatch: 'full'},
+  { path: 'peliculas/index', component: IndexComponent },
+  { path: 'peliculas/create', component: CreateComponent },
+  { path: 'peliculas/edit/:idPelicula', component: EditComponent }
 ];
 
 @NgModule({
