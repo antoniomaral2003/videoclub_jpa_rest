@@ -24,8 +24,8 @@ export class EditComponent implements  OnInit {
     titulo: "VOID",
     descripcion: "VOID VOID VOID",
     anyoLanzamiento: "1970-01-01",
-    idioma: this.idioma;
-    idiomaOriginal: this.ididomaOriginal;
+    idioma: this.idioma,
+    idiomaOriginal: this.ididomaOriginal,
     duracionAlquiler: 120,
     rentalRate: 25.99,
     duracion: 120,
