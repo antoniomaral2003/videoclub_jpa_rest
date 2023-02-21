@@ -5,7 +5,7 @@ export interface Pelicula {
   id: number;
   titulo: string;
   descripcion: string;
-  anyoLanzamiento: Date;
+  anyoLanzamiento: string;
   idioma: Idioma;
   idiomaOriginal: Idioma;
   duracionAlquiler: number;
@@ -15,7 +15,7 @@ export interface Pelicula {
   clasificacion: string;
   caracteristicasEspeciales: string;
   categorias: Categoria[];
-  ultimaActualizacion: Date;
+  ultimaActualizacion: string;
 
 }
 
@@ -23,7 +23,7 @@ export interface Idioma {
 
   id: number;
   nombre: string;
-  ultimaActualizacion: Date;
+  ultimaActualizacion: string;
   peliculasIdioma: Pelicula[];
   peliculasIdiomaOriginal: Pelicula[];
 
