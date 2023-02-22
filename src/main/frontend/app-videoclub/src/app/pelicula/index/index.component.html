@@ -4,7 +4,7 @@
       <h4>Lista de Peliculas</h4>
     </div>
     <div class="col-md-6">
-      <a routerLink="/pelicula/create" class="btn btn-success float-md-end" style="margin-left: 2px; margin-top: 2px;">Crear Nueva Pelicula</a>
+      <a routerLink="/peliculas/create" class="btn btn-success float-md-end" style="margin-left: 2px; margin-top: 2px;">Crear Nueva Pelicula</a>
     </div>
   </div>
   <div class="row top5">
@@ -41,7 +41,7 @@
     <div class="col-md-1">{{ pelicula.ultimaActualizacion | date: 'dd/MM/yyyy HH:mm:ss'}}</div>
 
     <div class="col-md-3 d-md-flex justify-content-md-center">
-      <button type="button" [routerLink]="['/pelicula/', 'edit', pelicula.id  ]" class="btn btn-secondary" style="margin-left: 2px; margin-top: 2px;">Editar</button>
+      <button type="button" [routerLink]="['/peliculas/', 'edit', pelicula.id  ]" class="btn btn-secondary" style="margin-left: 2px; margin-top: 2px;">Editar</button>
       <button type="button" (click)="deletePelicula(pelicula.id)" class="btn btn-danger" style="margin-left: 2px; margin-top: 2px;">Eliminar</button>
 
     </div>

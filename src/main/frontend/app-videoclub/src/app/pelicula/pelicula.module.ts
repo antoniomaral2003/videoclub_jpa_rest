@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import { IndexComponent } from './index/index.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {RouterLink} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -12,7 +14,9 @@ import { IndexComponent } from './index/index.component';
     IndexComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
+    RouterLink
   ]
 })
 export class PeliculaModule { }
