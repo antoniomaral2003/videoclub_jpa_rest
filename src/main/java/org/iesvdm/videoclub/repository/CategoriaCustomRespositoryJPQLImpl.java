@@ -18,13 +18,13 @@ public class CategoriaCustomRespositoryJPQLImpl implements CategoriaCustomReposi
     private EntityManager em;
 
     @Override
-    public List<Pelicula> conteoPeliculas(Optional<String> buscarOptional, Optional<String> ordenarOptional) {
+    public Integer conteoPeliculas(Optional<String> buscarOptional, Optional<String> ordenarOptional) {
 
-        StringBuilder queryBuilder = new StringBuilder("SELECT * FROM Pelicula P");
+        StringBuilder queryBuilder = new StringBuilder("SELECT COUNT(id_pelicula) FROM pelicula_categoria");
 
         if (buscarOptional.isPresent()) {
 
-            queryBuilder.append(" ").append("WHERE P.nombre LIKE :nombre");
+            queryBuilder.append(" ").append("WHERE id_categoria LIKE :id");
 
         }
 
@@ -32,11 +32,11 @@ public class CategoriaCustomRespositoryJPQLImpl implements CategoriaCustomReposi
 
             if (buscarOptional.isPresent() && "asc".equalsIgnoreCase(buscarOptional.get())) {
 
-                queryBuilder.append(" ").append("ORDER BY P.nombre ASC");
+                queryBuilder.append(" ").append("ORDER BY id_categoria ASC");
 
             } else if (buscarOptional.isPresent() && "desc".equalsIgnoreCase(buscarOptional.get())) {
 
-                queryBuilder.append(" ").append("ORDER BY P.nombre DESC");
+                queryBuilder.append(" ").append("ORDER BY id_categoria DESC");
 
             }
 
@@ -46,11 +46,11 @@ public class CategoriaCustomRespositoryJPQLImpl implements CategoriaCustomReposi
 
         if (buscarOptional.isPresent()) {
 
-            query.setParameter("nombre", "%"+buscarOptional.get()+"%");
+            query.setParameter("id", "%"+buscarOptional.get()+"%");
 
         }
 
-        return query.getResultList();
+        return query.getMaxResults();
     }
 
 }
