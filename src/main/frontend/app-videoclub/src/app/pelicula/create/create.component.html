@@ -18,9 +18,9 @@
           id="titulo"
           type="text"
           class="form-control">
-        <div *ngIf="f.titulo.touched && f.titulo.invalid" class="alert alert-danger">
-          <div *ngIf="f.titulo.errors.required">*Titulo es requerido.</div>
-          <div *ngIf="f.titulo.errors.pattern">*El titulo sólo puede contener letras.</div>
+        <div *ngIf="f['titulo'].touched && f['titulo'].invalid" class="alert alert-danger">
+          <div *ngIf="f['titulo'].errors['required']">*Titulo es requerido.</div>
+          <div *ngIf="f['titulo'].errors['pattern']">*El titulo sólo puede contener letras.</div>
         </div>
       </div>
       <div class="col-md-1 ">
@@ -30,9 +30,9 @@
           id="descripcion"
           type="text"
           class="form-control">
-        <div *ngIf="f.descripcion.touched && f.descripcion.invalid" class="alert alert-danger">
-          <div *ngIf="f.descripcion.errors.required">*Descripcion es requerido.</div>
-          <div *ngIf="f.descripcion.errors.pattern">*La descripcion sólo puede contener letras.</div>
+        <div *ngIf="f['descripcion'].touched && f['descripcion'].invalid" class="alert alert-danger">
+          <div *ngIf="f['descripcion'].errors['required']">*Descripcion es requerido.</div>
+          <div *ngIf="f['descripcion'].errors['pattern']">*La descripcion sólo puede contener letras.</div>
         </div>
       </div>
       <div class="col-md-1 ">
@@ -42,8 +42,8 @@
           id="anyoLanzamiento"
           type="text"
           class="form-control">
-        <div *ngIf="f.anyoLanzamiento.touched && f.anyoLanzamiento.invalid" class="alert alert-danger">
-          <div *ngIf="f.anyoLanzamiento.errors.required">*Año Lanzamiento es requerido.</div>
+        <div *ngIf="f['anyoLanzamiento'].touched && f['anyoLanzamiento'].invalid" class="alert alert-danger">
+          <div *ngIf="f['anyoLanzamiento'].errors['required']">*Año Lanzamiento es requerido.</div>
         </div>
       </div>
       <div class="col-md-1 ">
@@ -53,8 +53,8 @@
           id="idioma"
           type="text"
           class="form-control">
-        <div *ngIf="f.idioma.touched && f.idioma.invalid" class="alert alert-danger">
-          <div *ngIf="f.idioma.errors.required">*Idioma es requerido.</div>
+        <div *ngIf="f['idioma'].touched && f['idioma'].invalid" class="alert alert-danger">
+          <div *ngIf="f['idioma'].errors['required']">*Idioma es requerido.</div>
         </div>
       </div>
       <div class="col-md-1 ">
@@ -64,8 +64,8 @@
           id="IdiomaOriginal"
           type="text"
           class="form-control">
-        <div *ngIf="f.idiomaOriginal.touched && f.idiomaOriginal.invalid" class="alert alert-danger">
-          <div *ngIf="f.idiomaOriginal.errors.required">*Idioma Original es requerido.</div>
+        <div *ngIf="f['idiomaOriginal'].touched && f['idiomaOriginal'].invalid" class="alert alert-danger">
+          <div *ngIf="f['idiomaOriginal'].errors['required']">*Idioma Original es requerido.</div>
         </div>
       </div>
       <div class="col-md-1 ">
@@ -75,8 +75,8 @@
           id="duracionAlquiler"
           type="text"
           class="form-control">
-        <div *ngIf="f.duracionAlquiler.touched && f.duracionAlquiler.invalid" class="alert alert-danger">
-          <div *ngIf="f.duracionAlquiler.errors.required">*Duracion Alquiler es requerido.</div>
+        <div *ngIf="f['duracionAlquiler'].touched && f['duracionAlquiler'].invalid" class="alert alert-danger">
+          <div *ngIf="f['duracionAlquiler'].errors['required']">*Duracion Alquiler es requerido.</div>
         </div>
       </div>
       <div class="col-md-1 ">
@@ -86,8 +86,8 @@
           id="rentalRate"
           type="text"
           class="form-control">
-        <div *ngIf="f.rentalRate.touched && f.rentalRate.invalid" class="alert alert-danger">
-          <div *ngIf="f.rentalRate.errors.required">*Rental Rate es requerido.</div>
+        <div *ngIf="f['rentalRate'].touched && f['rentalRate'].invalid" class="alert alert-danger">
+          <div *ngIf="f['rentalRate'].errors['required']">*Rental Rate es requerido.</div>
         </div>
       </div>
       <div class="col-md-1 ">
@@ -97,8 +97,8 @@
           id="duracion"
           type="text"
           class="form-control">
-        <div *ngIf="f.duracion.touched && f.duracion.invalid" class="alert alert-danger">
-          <div *ngIf="f.duracion.errors.required">*Duracion es requerido.</div>
+        <div *ngIf="f['duracion'].touched && f['duracion'].invalid" class="alert alert-danger">
+          <div *ngIf="f['duracion'].errors['required']">*Duracion es requerido.</div>
         </div>
       </div>
       <div class="col-md-1 ">
@@ -108,8 +108,8 @@
           id="replacementCost"
           type="text"
           class="form-control">
-        <div *ngIf="f.replacementCost.touched && f.replacementCost.invalid" class="alert alert-danger">
-          <div *ngIf="f.replacementCost.errors.required">*Replacement Cost es requerido.</div>
+        <div *ngIf="f['replacementCost'].touched && f['replacementCost'].invalid" class="alert alert-danger">
+          <div *ngIf="f['replacementCost'].errors['required']">*Replacement Cost es requerido.</div>
         </div>
       </div>
       <div class="col-md-1 ">
@@ -119,8 +119,8 @@
           id="clasificacion"
           type="text"
           class="form-control">
-        <div *ngIf="f.clasificacion.touched && f.clasificacion.invalid" class="alert alert-danger">
-          <div *ngIf="f.clasificacion.errors.required">*Clasificacion es requerido.</div>
+        <div *ngIf="f['clasificacion'].touched && f['clasificacion'].invalid" class="alert alert-danger">
+          <div *ngIf="f['clasificacion'].errors['required']">*Clasificacion es requerido.</div>
         </div>
       </div>
       <div class="col-md-1 ">
@@ -130,8 +130,8 @@
           id="caracteristicasEspeciales"
           type="text"
           class="form-control">
-        <div *ngIf="f.caracteristicasEspeciales.touched && f.caracteristicasEspeciales.invalid" class="alert alert-danger">
-          <div *ngIf="f.caracteristicasEspeciales.errors.required">*Caracteristicas Especiales es requerido.</div>
+        <div *ngIf="f['caracteristicasEspeciales'].touched && f['caracteristicasEspeciales'].invalid" class="alert alert-danger">
+          <div *ngIf="f['caracteristicasEspeciales'].errors['required']">*Caracteristicas Especiales es requerido.</div>
         </div>
       </div>
       <div class="col-md-1 ">
@@ -141,8 +141,8 @@
           id="categorias"
           type="text"
           class="form-control">
-        <div *ngIf="f.categorias.touched && f.categorias.invalid" class="alert alert-danger">
-          <div *ngIf="f.categorias.errors.required">*Categorias es requerido.</div>
+        <div *ngIf="f['categorias'].touched && f['categorias'].invalid" class="alert alert-danger">
+          <div *ngIf="f['categorias'].errors['required']">*Categorias es requerido.</div>
         </div>
       </div>
     </div>

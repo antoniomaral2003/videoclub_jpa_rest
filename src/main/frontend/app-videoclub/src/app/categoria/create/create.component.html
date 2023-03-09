@@ -17,9 +17,9 @@
           id="nombre"
           type="text"
           class="form-control">
-        <div *ngIf="f.nombre.touched && f.nombre.invalid" class="alert alert-danger">
-          <div *ngIf="f.nombre.errors.required">*Nombre es requerido.</div>
-          <div *ngIf="f.nombre.errors.pattern">*El nombre sólo puede contener letras.</div>
+        <div *ngIf="f['nombre'].touched && f['nombre'].invalid" class="alert alert-danger">
+          <div *ngIf="f['nombre'].errors['required']">*Nombre es requerido.</div>
+          <div *ngIf="f['nombre'].errors['pattern']">*El nombre sólo puede contener letras.</div>
         </div>
       </div>
     </div>
